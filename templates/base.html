@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Проект{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 1px solid #dee2e6;
+            margin: 15px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f8f9fa;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/books/">Книги</a> |
+    <a href="/users/">Пользователи</a> |
+    <a href="/clothes/male/">Одежда</a> |
+    <a href="/passport/add/">Паспорт</a>
+    <hr>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<hr>
+<footer>© GEEKS 2025</footer>
+
+</body>
+</html>
+
+

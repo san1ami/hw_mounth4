@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Детская одежда{% endblock %}
+
+{% block content %}
+<div style="max-width: 700px; margin: 40px auto;">
+    <h1 style="text-align: center; margin-bottom: 20px;">Детская одежда</h1>
+
+    {% if object_list %}
+        <ul style="list-style: none; padding: 0;">
+            {% for c in object_list %}
+                <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                    {{ c.title }} — {{ c.price }} ₽
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p style="text-align: center; color: #555;">Нет товаров для отображения.</p>
+    {% endif %}
+</div>
+{% endblock %}
